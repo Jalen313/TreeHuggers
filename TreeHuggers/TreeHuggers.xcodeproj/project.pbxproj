@@ -14,6 +14,7 @@
 		695D09962B65988E003AEA17 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695D09952B65988E003AEA17 /* Rectangle.swift */; };
 		69DF0C932B669186000E7029 /* Variety Of Plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0C922B669186000E7029 /* Variety Of Plants.swift */; };
 		69DF0C972B692530000E7029 /* Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0C962B692530000E7029 /* Old.swift */; };
+		9E1E916B2B6D48AC00812306 /* RoundText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E916A2B6D48AC00812306 /* RoundText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		695D09952B65988E003AEA17 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		69DF0C922B669186000E7029 /* Variety Of Plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Variety Of Plants.swift"; sourceTree = "<group>"; };
 		69DF0C962B692530000E7029 /* Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Old.swift; sourceTree = "<group>"; };
+		9E1E916A2B6D48AC00812306 /* RoundText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				695D09872B63D28B003AEA17 /* ContentView.swift */,
 				69DF0C922B669186000E7029 /* Variety Of Plants.swift */,
 				695D09952B65988E003AEA17 /* Rectangle.swift */,
+				9E1E916A2B6D48AC00812306 /* RoundText.swift */,
 				69DF0C962B692530000E7029 /* Old.swift */,
 				695D09892B63D28C003AEA17 /* Assets.xcassets */,
 				695D098B2B63D28C003AEA17 /* Preview Content */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1E916B2B6D48AC00812306 /* RoundText.swift in Sources */,
 				695D09962B65988E003AEA17 /* Rectangle.swift in Sources */,
 				69DF0C932B669186000E7029 /* Variety Of Plants.swift in Sources */,
 				695D09882B63D28B003AEA17 /* ContentView.swift in Sources */,
