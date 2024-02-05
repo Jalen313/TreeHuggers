@@ -15,6 +15,13 @@
 		69DF0C932B669186000E7029 /* Variety Of Plants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0C922B669186000E7029 /* Variety Of Plants.swift */; };
 		69DF0C972B692530000E7029 /* Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DF0C962B692530000E7029 /* Old.swift */; };
 		9E1E916B2B6D48AC00812306 /* RoundText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1E916A2B6D48AC00812306 /* RoundText.swift */; };
+		B7A262922B716B7B0034E1FD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A262912B716B7B0034E1FD /* HomeView.swift */; };
+		B7A262942B716BE60034E1FD /* PlantNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A262932B716BE60034E1FD /* PlantNameView.swift */; };
+		B7A262962B716C070034E1FD /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A262952B716C070034E1FD /* TaskListView.swift */; };
+		B7A262982B716C250034E1FD /* TreeHuggerGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A262972B716C250034E1FD /* TreeHuggerGradient.swift */; };
+		B7A2629A2B716C390034E1FD /* MyPlantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A262992B716C390034E1FD /* MyPlantView.swift */; };
+		B7A2629C2B716C580034E1FD /* RewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2629B2B716C580034E1FD /* RewardsView.swift */; };
+		B7A2629E2B716C630034E1FD /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A2629D2B716C630034E1FD /* SheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +34,13 @@
 		69DF0C922B669186000E7029 /* Variety Of Plants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Variety Of Plants.swift"; sourceTree = "<group>"; };
 		69DF0C962B692530000E7029 /* Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Old.swift; sourceTree = "<group>"; };
 		9E1E916A2B6D48AC00812306 /* RoundText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundText.swift; sourceTree = "<group>"; };
+		B7A262912B716B7B0034E1FD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B7A262932B716BE60034E1FD /* PlantNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantNameView.swift; sourceTree = "<group>"; };
+		B7A262952B716C070034E1FD /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		B7A262972B716C250034E1FD /* TreeHuggerGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeHuggerGradient.swift; sourceTree = "<group>"; };
+		B7A262992B716C390034E1FD /* MyPlantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantView.swift; sourceTree = "<group>"; };
+		B7A2629B2B716C580034E1FD /* RewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsView.swift; sourceTree = "<group>"; };
+		B7A2629D2B716C630034E1FD /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +81,13 @@
 				69DF0C962B692530000E7029 /* Old.swift */,
 				695D09892B63D28C003AEA17 /* Assets.xcassets */,
 				695D098B2B63D28C003AEA17 /* Preview Content */,
+				B7A262912B716B7B0034E1FD /* HomeView.swift */,
+				B7A262932B716BE60034E1FD /* PlantNameView.swift */,
+				B7A262952B716C070034E1FD /* TaskListView.swift */,
+				B7A262972B716C250034E1FD /* TreeHuggerGradient.swift */,
+				B7A262992B716C390034E1FD /* MyPlantView.swift */,
+				B7A2629B2B716C580034E1FD /* RewardsView.swift */,
+				B7A2629D2B716C630034E1FD /* SheetView.swift */,
 			);
 			path = TreeHuggers;
 			sourceTree = "<group>";
@@ -149,12 +170,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7A2629A2B716C390034E1FD /* MyPlantView.swift in Sources */,
 				9E1E916B2B6D48AC00812306 /* RoundText.swift in Sources */,
+				B7A262942B716BE60034E1FD /* PlantNameView.swift in Sources */,
+				B7A262962B716C070034E1FD /* TaskListView.swift in Sources */,
+				B7A262982B716C250034E1FD /* TreeHuggerGradient.swift in Sources */,
+				B7A2629E2B716C630034E1FD /* SheetView.swift in Sources */,
+				B7A262922B716B7B0034E1FD /* HomeView.swift in Sources */,
 				695D09962B65988E003AEA17 /* Rectangle.swift in Sources */,
 				69DF0C932B669186000E7029 /* Variety Of Plants.swift in Sources */,
 				695D09882B63D28B003AEA17 /* ContentView.swift in Sources */,
 				69DF0C972B692530000E7029 /* Old.swift in Sources */,
 				695D09862B63D28B003AEA17 /* TreeHuggersApp.swift in Sources */,
+				B7A2629C2B716C580034E1FD /* RewardsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
