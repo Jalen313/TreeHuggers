@@ -13,7 +13,7 @@ let rectangleContent = ["Fruit", "Vegetables", "HousePlants", "Flower", "Herbs",
 
 let fruits = ["StrawBerry", "Apple", "Orange"]
 let vegetables = [ "Carrot", "Corn", "Broccoli"]
-let housePlants = ["AloeVera", "SnakePlant", "Something"]
+let housePlants = ["AloeVera", "SnakePlant", "ZZPlant"]
 let herbs = ["Basil", "Parsley", "Cilantro"]
 let flowers = ["SunFlower", "Petunia", "MariGolds"]
 
