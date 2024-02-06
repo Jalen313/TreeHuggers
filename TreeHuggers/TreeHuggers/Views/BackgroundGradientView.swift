@@ -18,14 +18,11 @@ struct ButtonListView: View {
     }
     
     var body: some View {
-        ScrollView {
-            ForEach(listItems, id: \.self) { item in
-                ListButtonView(plantImage: Image(item.rawValue), plantString: item.rawValue)
-                    .padding(-5)
-            }
-            .listRowBackground(Color.clear)
-            .padding()
-        }
+        LinearGradient(
+            gradient: Gradient(colors: [.lightBlueGradient, .midBlueGradient, .darkBlueGradient, .darkBlueGradient, .midBlueGradient, .lightBlueGradient]),
+            startPoint: .topTrailing,
+            endPoint: .bottomLeading)
+        .ignoresSafeArea()
     }
 }
 
