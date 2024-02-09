@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct TreeHuggersApp: App {
+    @AppStorage("userHasOnboarded") var userHasOnboarded: Bool = false
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+    
+            if userHasOnboarded == true {
+                HomeView()
+            } else {
+                ContentView()
+//                    .onDisappear {
+//                    userHasOnboarded = true
+//                    }
+                
+            }
         }
     }
 }

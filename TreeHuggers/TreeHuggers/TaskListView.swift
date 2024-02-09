@@ -14,7 +14,6 @@ let linearGradientBG = LinearGradient(colors: [Color.teal, Color.blue], startPoi
 struct Task: Identifiable {
     let id = UUID()
     let name: String
-//    let icon: String
     var isTaskCompleted: Bool
 }
 
@@ -27,49 +26,50 @@ struct TaskListView: View {
     
     @State private var tasks = [Task(
         name: "♼ Recycle",
-//        icon: "􀙛",
         isTaskCompleted: false),
                                 
                 Task(
                     name: "🪴 Water a plant",
-//                    icon: "􀙛",
                     isTaskCompleted: false),
                                 
                     Task(
                      name: "🚶 Go for a walk",
-//                     icon: "🍎",
                      isTaskCompleted: false),
                                 
                      Task(
                      name: "🌧️🪣 Collect rainwater",
-//                     icon: "🍎",
                      isTaskCompleted: false),
                     
                      Task(
                      name: "🚰 Use a reusable water bottle",
-//                     icon: "🍎",
                      isTaskCompleted: false)]
     
     
     
     var body: some View {
+        ZStack {
+            LinearGradient(colors: [Color.teal, Color.blue], startPoint: .top, endPoint: .bottom)
             VStack {
-                Spacer()
-                List($tasks) { $task in
-                    TaskCellView(task: $task)
-                    
-                    //^dollar sign makes it a binding task and it also gives the type of binding: an array of tasks
-                    //^^ "task in" is a immutable member, cant use mutating value on it
-                    //                ExtractedView()
                     Spacer()
+                    List($tasks) { $task in
+                        TaskCellView(task: $task)
+                        
+                        //^dollar sign makes it a binding task and it also gives the type of binding: an array of tasks
+                        //^^ "task in" is a immutable member, cant use mutating value on it
+                        //                ExtractedView()
+                        Spacer()
+                    }
+                    Text("Completed Tasks: \(tasks.filter { $0.isTaskCompleted }.count )")
                 }
-                Text("Completed Tasks: \(tasks.filter { $0.isTaskCompleted }.count )")
-            }
-        
-//            .padding([.top], 15)
-//            .multilineTextAlignment(.center)
-            .scrollContentBackground(.hidden)
-            .background(linearGradient)
+            .accessibility(value: Text("0 out of 5"))
+                        .padding([.bottom], 45)
+
+            
+    //            .padding([.top], 15)
+    //            .multilineTextAlignment(.center)
+                .scrollContentBackground(.hidden)
+//            .background(linearGradient)
+        }
         }
     }
 
@@ -102,10 +102,7 @@ struct TaskCellView: View {
             }
             .padding([.top], 15)
             .multilineTextAlignment(.center)
-//            .listRowSeparator(.hidden)
-//            .listSectionSeparator(.hidden)
-            .listRowSeparatorTint(.green, edges: .all)
-            .listRowBackground(Color.green)
+
         }
     }
 

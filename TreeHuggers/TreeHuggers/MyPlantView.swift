@@ -13,6 +13,7 @@ struct MyPlantView: View {
             linearGradient
                 //.ignoresSafeArea()
             Text("My Plants!")
+            
         }
     }
 }

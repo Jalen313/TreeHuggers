@@ -13,7 +13,7 @@ struct HomeView: View {
     
     var body: some View {
             
-            TabView(selection: $selectedTab) {
+            TabView {
                 Button("My Plants") {
                     showingMyPlants.toggle()
                 }
@@ -21,12 +21,13 @@ struct HomeView: View {
                 .padding([.top], 5)
                 .sheet(isPresented: $showingMyPlants) {
                     
+                    MyPlantView()
                     SheetView()
                 }
                 .tabItem {
                     Label("My Plant", systemImage: "tree.circle.fill")
                 }
-            
+             
             TaskListView()
                 .tabItem{
                     Label ("Nature Tasks", systemImage: "list.clipboard")

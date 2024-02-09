@@ -10,6 +10,7 @@ struct ContentView: View {
     @State private var selectedCategory: String? = nil
     @State private var selectedVariety: PlantVariety? = nil
     
+    
     let columns = [
         GridItem(.flexible(minimum: 30, maximum: 30))
     ]
@@ -17,11 +18,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-        LinearGradient(
+                LinearGradient(
                     gradient: Gradient(colors: [Color.teal, Color.blue]),
                     startPoint: .top,
                     endPoint: .bottom)
-                    .ignoresSafeArea()
+                .ignoresSafeArea()
                 // Color the Background
                 
                 VStack {
@@ -33,21 +34,21 @@ struct ContentView: View {
                         .font(.system(size: 25, design: .rounded))
                     // Welcome Text
                     
-            VStack {
-            ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 10) {
-        ForEach(getItems(for: selectedCategory), id: \.self.imageName) { variety in
-        Button(action: {
-                selectedVariety = variety
-            print("Button tapped for \(variety.name)")
-                            }, label: {
-        VStack { Image(variety.imageName)
-            .resizable()
-            .scaledToFit()
-            .frame(width: 200, height: 180)
-            Text(variety.name)
-            .font(.system(size: 25, design: .rounded))
-            .foregroundColor(Color.white)
+                    VStack {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 10) {
+                                ForEach(getItems(for: selectedCategory), id: \.self.imageName) { variety in
+                                    Button(action: {
+                                        selectedVariety = variety
+                                        print("Button tapped for \(variety.name)")
+                                    }, label: {
+                                        VStack { Image(variety.imageName)
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 200, height: 180)
+                                            Text(variety.name)
+                                                .font(.system(size: 25, design: .rounded))
+                                                .foregroundColor(Color.white)
                                         }
                                     })
                                 }
@@ -58,38 +59,43 @@ struct ContentView: View {
                     
                     
                     
-    HStack { if selectedVariety == nil && selectedCategory == nil  {
-            Text("Choose a Category")
-            .foregroundStyle(Color.white)
-            .font(.system(size: 25, design: .rounded))
-            .padding(.top, 20)
-            .padding(.bottom, 10)
-                        } else {
-            Text("Choose a Friend")
-            .foregroundStyle(Color.white)
-            .font(.system(size: 25, design: .rounded))
-            .padding(.top, 20)
-            .padding(.bottom, 10)
-                            
-                            // Continue button
-        NavigationLink(destination: NextPageView(), label: { Text("Continue")
-            .padding()
-            .background(Color.green)
-            .foregroundColor(Color.white)
-            .cornerRadius(10)
-                            })
-            .padding(.bottom, 20)
+                    HStack { if selectedVariety == nil && selectedCategory == nil  {
+                        Text("Choose a Category")
+                            .foregroundStyle(Color.white)
+                            .font(.system(size: 25, design: .rounded))
+                            .padding(.top, 20)
+                            .padding(.bottom, 10)
+                    } else {
+                        Text("Choose a Friend")
+                            .foregroundStyle(Color.white)
+                            .font(.system(size: 25, design: .rounded))
+                            .padding(.top, 20)
+                            .padding(.bottom, 10)
+                        
+                        // Continue button
+                        
+                        NavigationLink(destination: PlantNameView(), label: { Text("Continue")
+                                .padding()
+                                .background(Color.green)
+                                .foregroundColor(Color.white)
+                                .cornerRadius(10)
+
                         }
+                                       
+                                       
+                        )
+                        //            .padding(.bottom, 20)
                     }
+                }
                     
-         VStack { ForEach(0..<rectangleContent.count, id: \.self) { index in
-        Button(action: { selectedCategory = rectangleContent[index]
-        selectedVariety = nil // Reset selectedVariety when category changes
-        print("Button tapped at index \(index)")
-                            }, label: {
-        customRectangle(Category: rectangleContent[index])
-                            })
-                        }
+                    VStack { ForEach(0..<rectangleContent.count, id: \.self) { index in
+                        Button(action: { selectedCategory = rectangleContent[index]
+                            selectedVariety = nil // Reset selectedVariety when category changes
+                            print("Button tapped at index \(index)")
+                        }, label: {
+                            customRectangle(Category: rectangleContent[index])
+                        })
+                    }
                     }
                     
                     Spacer()
@@ -118,7 +124,7 @@ struct ContentView: View {
 
 struct NextPageView: View {
     var body: some View {
-        Text("Next Page Content Goes Here")
+        Text("Name Your Friend")
             .navigationBarTitle("Next Page", displayMode: .inline)
     }
 }

@@ -25,11 +25,7 @@ struct PlantNameView: View {
 //                .resizable()
 //                    .aspectRatio(contentMode: .fit)
 //            
-
-
-            
-            
-            
+           
             VStack{
                 Text(" \(plantName)")
                     .font(.largeTitle)
