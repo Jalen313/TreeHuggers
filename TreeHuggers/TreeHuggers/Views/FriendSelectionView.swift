@@ -9,7 +9,15 @@ import SwiftUI
 
 struct FriendSelectionView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            BackgroundGradientView()
+            VStack{
+                PlantChoiceHeader()
+                ScrollViewReader(content: { _ in
+                    ButtonListView()
+                })
+            }
+        }
     }
 }
 

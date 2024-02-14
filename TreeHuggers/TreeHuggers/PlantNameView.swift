@@ -11,6 +11,8 @@ struct PlantNameView: View {
     @State private var showingAlert = false
     @AppStorage("plantName") var plantName: String = ""
     @State private var tempName =  ""
+    @AppStorage("userHasOnboarded") var userHasOnboarded: Bool = false
+
     
     let linearGradientBG = LinearGradient(colors: [Color.teal, Color.blue], startPoint: .top, endPoint: .bottom)
 
@@ -19,58 +21,78 @@ struct PlantNameView: View {
         ZStack{
             linearGradientBG
                 .ignoresSafeArea(.all)
+//            Image("Strawberry")
+//                .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//            
+
 
             
+            
+            
             VStack{
+                Text(" \(plantName)")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 300, height: 535, alignment: .top)
+                
+
                 Button("Click here to name me!") {
                     showingAlert.toggle()
                 }
                 .font(.title)
                 .sfRoundFontStyle()
                 .font(.system(size: 24))
-                .foregroundStyle(.white)
+                .foregroundStyle(.black)
                 .buttonStyle(.borderedProminent)
-                .tint(.orange)
+                .tint(.green)
                 .multilineTextAlignment(.center)
-                .padding([.bottom], 75)
 
                 .alert("Plant Name", isPresented: $showingAlert) {
                     
-                    TextField("Enter my new name", text: $tempName)
+                    TextField("Placeholder", text: $tempName)
+                    
                     
                     Button("OK", action: submit)
+                    Button("Cancel", role: .cancel) {}
+//                    Button("Reset my name", role: .destructive) {
+//                        // Update the value stored in UserDefaults
+//                        //^ needs to be bigger
+//                        plantName = ""
+//                    }
+//                    Button("", role: .destructive) {}
 
-                    Button("Cancel",  role: .destructive)
-                            {
-                        //                plantName = ""
-                        showingAlert = false // <-
-                    }
+
+//
+//                    Button("Cancel",  action:
+//                            {
+//                        //                plantName = ""
+//                        showingAlert = false // <-
+//                    })
                 
                    //
                 } message: {
                     Text("Enter the name of your new friend.")
                 }
                 
-                
-                Text("Your Plant Is Named: \(plantName)!")
-                    .padding([.top], 15)
-                    .font(.title2)
-                //        .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
+        
 
                 
-                
-                Button("Reset my name") {
-                    // Update the value stored in UserDefaults
-                    //^ needs to be bigger
-                    plantName = ""
-                }
-                .font(.title2)
-                .sfRoundFontStyle()
-                .padding([.top], 95)
-                .foregroundStyle(Color.red)
-                .fontWeight(.heavy)
-                .font(.system(size: 22))
+//                
+//                Button("Reset my name") {
+//                    // Update the value stored in UserDefaults
+//                    //^ needs to be bigger
+//                    plantName = ""
+//                }
+//                .font(.title2)
+//                .buttonStyle(.borderedProminent)
+//                .tint(.red)
+//                .sfRoundFontStyle()
+//                .padding([.top], 25)
+//                .foregroundStyle(Color.white)
+//                .fontWeight(.bold)
+//                .font(.system(size: 22))
                 
                 
             }
@@ -81,6 +103,8 @@ struct PlantNameView: View {
             func submit() {
                 plantName = tempName
                 print("You entered \(plantName)")
+                userHasOnboarded = true
+                
                 }
 
     

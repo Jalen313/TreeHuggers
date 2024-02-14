@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+enum PlantCategory: String, CaseIterable {
+    case fruit = "Fruit",
+         vegetable = "Vegetable",
+         housePlant = "House Plant",
+         flower = "Flower",
+         tree = "Tree"
+}
